@@ -88,3 +88,84 @@ form {
   width: 50%;
   margin: auto;
 }
+.card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 8px;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.card.done {
+  background-color: #e0ffe0 !important;
+  text-decoration: line-through;
+}
+
+.card.high {
+  border-left: 5px solid red;
+}
+
+.card.medium {
+  border-left: 5px solid orange;
+}
+
+.card.low {
+  border-left: 5px solid green;
+}
+
+.card .title {
+  font-size: 1.5em;
+  margin-bottom: 8px;
+}
+
+.card .content {
+  margin-bottom: 8px;
+}
+
+.card button {
+  margin-right: 8px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card .doneButton {
+  background-color: #4CAF50; /* 绿色 */
+  color: white;
+}
+
+.card .deleteButton {
+  background-color: #f44336; /* 红色 */
+  color: white;
+}
+.priority-select {
+  width: 100%; /* Set to full width */
+  padding: 10px; /* Add padding inside the select box */
+  border: 1px solid #ccc; /* Border around the select box */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Text size */
+  color: #333; /* Text color */
+  background-color: #fff; 
+  
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  cursor: pointer; 
+  appearance: none;
+  box-sizing: border-box;
+}
+
+
+
+/* Styling for the container wrapping the select box */
+.select-container {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  appearance: none; 
+}

@@ -7,9 +7,9 @@ function App() {
   
   const [ taskState, setTaskState ] = useState({
     tasks: [
-      { id: 1, title:"Dishes", description: "Empty dishwasher", deadline: "Today", done: false },
-      { id: 2, title: "Laundry", description: "Fold clothes and put away", deadline: "Tomorrow", done: false },
-      { id: 3, title: "Tidy up", deadline: "Today", done: false}
+      { id: 1, title:"Dishes", description: "Empty dishwasher", deadline: "Today", done: false, priority: "medium" },
+      { id: 2, title: "Laundry", description: "Fold clothes and put away", deadline: "Tomorrow", done: false, priority: "high" },
+      { id: 3, title: "Tidy up", deadline: "Today", done: false, priority: "low"}
     ]
   });
 
@@ -28,7 +28,8 @@ function App() {
   const [ formState, setFormState ] = useState({
     title: "",
     description: "",
-    deadline: ""
+    deadline: "",
+    priority: "medium"
   });
 
   const formChangeHandler = (event) => {
@@ -72,6 +73,7 @@ function App() {
           title={task.title}
           description={task.description}
           deadline={task.deadline}
+          priority={task.priority}
           key={task.id}
           done={task.done}
           markDone={() => doneHandler(index)}
@@ -79,7 +81,7 @@ function App() {
           
         />
       ))}
-      <AddTaskForm submit={formSubmitHandler} change={formChangeHandler} />
+      <AddTaskForm submit={formSubmitHandler} change={formChangeHandler} formState={formState}/>
     </div>
 );
 }
